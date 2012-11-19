@@ -45,6 +45,9 @@ module SampleApp
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+    # Ensures that Rails throws errors on invalid mass assignment. from 10.6
+    config.active_record.whitelist_attributes = true
+    
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
